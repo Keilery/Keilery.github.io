@@ -128,3 +128,128 @@
         }
         
         .
+content {
+            position: relative;
+            z-index: 1;
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 1.4;
+            font-size: 1rem;
+        }
+        
+        .highlight-box {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 15px 30px;
+            margin: 15px 0;
+            border-radius: 20px;
+            position: relative;
+            box-shadow: 
+                inset 0 1px 0 rgba(255, 255, 255, 0.05),
+                0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .highlight-box::before {
+            content: '◆';
+            position: absolute;
+            top: -12px;
+            right: 30px;
+            font-size: 1.3rem;
+            color: rgba(255, 255, 255, 0.6);
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+        }
+        
+        .tag {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.85rem;
+            margin: 0 3px;
+            box-shadow: 
+                0 4px 15px rgba(0, 0, 0, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .tag:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-2px);
+            box-shadow: 
+                0 6px 20px rgba(0, 0, 0, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+        }
+        
+        .tag-ready {
+            display: inline-block;
+            background: rgba(100, 255, 150, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(100, 255, 150, 0.3);
+            color: #64ff96;
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.85rem;
+            margin: 0 3px;
+            box-shadow: 
+                0 4px 15px rgba(0, 0, 0, 0.2),
+                inset 0 1px 0 rgba(100, 255, 150, 0.1);
+        }
+        
+        .example-box {
+            background: rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 12px 20px;
+            margin: 12px 0;
+            font-family: 'Courier New', monospace;
+            color: rgba(255, 255, 255, 0.7);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+        }
+        
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            margin: 20px 0;
+            border-radius: 1px;
+        }
+        
+        .icon-row {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 15px 0;
+            font-size: 1.8rem;
+            filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.2));
+        }
+        
+        .floating {
+            animation: float 4s ease-in-out infinite;
+            opacity: 0.8;
+        }
+        
+        .floating:nth-child(2) { animation-delay: 0.5s; }
+        .floating:nth-child(3) { animation-delay: 1s; }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+        
+        .suggestion-box {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(15px);
+            border: 1px dashed rgba(255, 255, 255, 0.2);
+            border-radius: 25px;
+            padding: 25px;
+            margin-top: 20px;
+            text-align: center;
+            box-shadow: 
+                inset 0 1px 0 rgba(255, 255, 255, 0.05),
